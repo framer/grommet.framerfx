@@ -6,6 +6,7 @@ export type Controls = {
   alignSelf: ControlDescription;
   gridArea: ControlDescription;
   margin: ControlDescription;
+  disabled: ControlDescription;
   dropBackground: ControlDescription;
   justifyContent: ControlDescription;
   icon: ControlDescription;
@@ -28,6 +29,7 @@ export const controls: Controls = {
   },
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
+  disabled: { title: "Disabled", type: ControlType.Boolean },
   dropBackground: { title: "DropBackground", type: ControlType.String },
   justifyContent: {
     title: "JustifyContent",

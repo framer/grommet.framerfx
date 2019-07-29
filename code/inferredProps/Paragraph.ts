@@ -10,6 +10,7 @@ export type Controls = {
   responsive: ControlDescription;
   size: ControlDescription;
   textAlign: ControlDescription;
+  placeholder: ControlDescription;
 };
 
 /**
@@ -33,7 +34,8 @@ export const controls: Controls = {
     options: ["start", "center", "end"],
     optionTitles: ["Start", "Center", "End"],
     type: ControlType.Enum
-  }
+  },
+  placeholder: { title: "Placeholder", type: ControlType.String }
 };
 
 export function merge(

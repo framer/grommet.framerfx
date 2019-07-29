@@ -7,6 +7,8 @@ export type Controls = {
   htmlFor: ControlDescription;
   label: ControlDescription;
   pad: ControlDescription;
+  checked: ControlDescription;
+  disabled: ControlDescription;
   placeholder: ControlDescription;
 };
 
@@ -19,6 +21,8 @@ export const controls: Controls = {
   htmlFor: { title: "HtmlFor", type: ControlType.String },
   label: { title: "Label", type: ControlType.String },
   pad: { title: "Pad", type: ControlType.Boolean },
+  checked: { title: "Checked", type: ControlType.Boolean },
+  disabled: { title: "Disabled", type: ControlType.Boolean },
   placeholder: { title: "Placeholder", type: ControlType.String }
 };
 

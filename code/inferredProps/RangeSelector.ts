@@ -11,6 +11,7 @@ export type Controls = {
   round: ControlDescription;
   size: ControlDescription;
   step: ControlDescription;
+  placeholder: ControlDescription;
 };
 
 /**
@@ -30,7 +31,8 @@ export const controls: Controls = {
   opacity: { title: "Opacity", type: ControlType.String },
   round: { title: "Round", type: ControlType.String },
   size: { title: "Size", type: ControlType.String },
-  step: { title: "Step", type: ControlType.Number }
+  step: { title: "Step", type: ControlType.Number },
+  placeholder: { title: "Placeholder", type: ControlType.String }
 };
 
 export function merge(

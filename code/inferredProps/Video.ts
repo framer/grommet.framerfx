@@ -8,6 +8,7 @@ export type Controls = {
   margin: ControlDescription;
   fit: ControlDescription;
   mute: ControlDescription;
+  placeholder: ControlDescription;
 };
 
 /**
@@ -29,7 +30,8 @@ export const controls: Controls = {
     optionTitles: ["Cover", "Contain"],
     type: ControlType.Enum
   },
-  mute: { title: "Mute", type: ControlType.Boolean }
+  mute: { title: "Mute", type: ControlType.Boolean },
+  placeholder: { title: "Placeholder", type: ControlType.String }
 };
 
 export function merge(

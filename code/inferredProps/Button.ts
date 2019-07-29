@@ -8,6 +8,7 @@ export type Controls = {
   margin: ControlDescription;
   active: ControlDescription;
   color: ControlDescription;
+  disabled: ControlDescription;
   fill: ControlDescription;
   focusIndicator: ControlDescription;
   gap: ControlDescription;
@@ -19,6 +20,7 @@ export type Controls = {
   primary: ControlDescription;
   reverse: ControlDescription;
   as: ControlDescription;
+  placeholder: ControlDescription;
 };
 
 /**
@@ -36,6 +38,7 @@ export const controls: Controls = {
   margin: { title: "Margin", type: ControlType.String },
   active: { title: "Active", type: ControlType.Boolean },
   color: { title: "Color", type: ControlType.String },
+  disabled: { title: "Disabled", type: ControlType.Boolean },
   fill: {
     title: "Fill",
     options: ["horizontal", "vertical"],
@@ -63,14 +66,14 @@ export const controls: Controls = {
       "object",
       "div",
       "small",
-      "a",
-      "style",
-      "title",
       "time",
       "link",
       "menu",
       "dialog",
       "text",
+      "a",
+      "style",
+      "title",
       "abbr",
       "address",
       "area",
@@ -237,14 +240,14 @@ export const controls: Controls = {
       "Object",
       "Div",
       "Small",
-      "A",
-      "Style",
-      "Title",
       "Time",
       "Link",
       "Menu",
       "Dialog",
       "Text",
+      "A",
+      "Style",
+      "Title",
       "Abbr",
       "Address",
       "Area",
@@ -407,7 +410,8 @@ export const controls: Controls = {
       "View"
     ],
     type: ControlType.Enum
-  }
+  },
+  placeholder: { title: "Placeholder", type: ControlType.String }
 };
 
 export function merge(

@@ -4,9 +4,11 @@ import { ControlType, PropertyControls, ControlDescription } from "framer";
 export type Controls = {
   fill: ControlDescription;
   focusIndicator: ControlDescription;
+  placeholder: ControlDescription;
   plain: ControlDescription;
   resize: ControlDescription;
   size: ControlDescription;
+  disabled: ControlDescription;
 };
 
 /**
@@ -15,6 +17,7 @@ export type Controls = {
 export const controls: Controls = {
   fill: { title: "Fill", type: ControlType.Boolean },
   focusIndicator: { title: "FocusIndicator", type: ControlType.Boolean },
+  placeholder: { title: "Placeholder", type: ControlType.String },
   plain: { title: "Plain", type: ControlType.Boolean },
   resize: {
     title: "Resize",
@@ -22,7 +25,8 @@ export const controls: Controls = {
     optionTitles: ["Horizontal", "Vertical"],
     type: ControlType.Enum
   },
-  size: { title: "Size", type: ControlType.String }
+  size: { title: "Size", type: ControlType.String },
+  disabled: { title: "Disabled", type: ControlType.Boolean }
 };
 
 export function merge(
