@@ -26,5 +26,6 @@ addPropertyControls(RangeSelector, {
   opacity: merge(controls.opacity, {}),
   round: merge(controls.round, {}),
   size: merge(controls.size, {}),
-  step: merge(controls.step, {})
+  step: merge(controls.step, {}),
+  placeholder: merge(controls.placeholder, {})
 });

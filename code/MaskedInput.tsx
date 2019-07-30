@@ -18,5 +18,7 @@ MaskedInput.defaultProps = {
 };
 
 addPropertyControls(MaskedInput, {
+  checked: merge(controls.checked, {}),
+  disabled: merge(controls.disabled, {}),
   placeholder: merge(controls.placeholder, {})
 });

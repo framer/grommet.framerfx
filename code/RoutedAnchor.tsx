@@ -19,5 +19,14 @@ RoutedAnchor.defaultProps = {
 
 addPropertyControls(RoutedAnchor, {
   path: merge(controls.path, {}),
-  method: merge(controls.method, {})
+  method: merge(controls.method, {}),
+  color: merge(controls.color, {}),
+  label: merge(controls.label, {}),
+  reverse: merge(controls.reverse, {}),
+  a11yTitle: merge(controls.a11yTitle, {}),
+  alignSelf: merge(controls.alignSelf, {}),
+  gridArea: merge(controls.gridArea, {}),
+  margin: merge(controls.margin, {}),
+  size: merge(controls.size, {}),
+  as: merge(controls.as, {})
 });

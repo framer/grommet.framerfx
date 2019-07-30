@@ -28,5 +28,6 @@ addPropertyControls(Heading, {
   responsive: merge(controls.responsive, {}),
   size: merge(controls.size, {}),
   textAlign: merge(controls.textAlign, {}),
-  truncate: merge(controls.truncate, {})
+  truncate: merge(controls.truncate, {}),
+  placeholder: merge(controls.placeholder, {})
 });

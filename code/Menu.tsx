@@ -22,6 +22,7 @@ addPropertyControls(Menu, {
   alignSelf: merge(controls.alignSelf, {}),
   gridArea: merge(controls.gridArea, {}),
   margin: merge(controls.margin, {}),
+  disabled: merge(controls.disabled, {}),
   dropBackground: merge(controls.dropBackground, {}),
   justifyContent: merge(controls.justifyContent, {}),
   icon: merge(controls.icon, {}),

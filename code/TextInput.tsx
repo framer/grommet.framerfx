@@ -20,6 +20,9 @@ TextInput.defaultProps = {
 addPropertyControls(TextInput, {
   dropHeight: merge(controls.dropHeight, {}),
   focusIndicator: merge(controls.focusIndicator, {}),
+  placeholder: merge(controls.placeholder, {}),
   plain: merge(controls.plain, {}),
-  size: merge(controls.size, {})
+  size: merge(controls.size, {}),
+  disabled: merge(controls.disabled, {}),
+  checked: merge(controls.checked, {})
 });

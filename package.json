@@ -17,6 +17,6 @@
 		"styled-components": "^4.3.2"
 	},
 	"scripts": {
-		"import:grommet": "component-importer --packageName grommet --index node_modules/grommet/index.d.ts"
+		"import:grommet": "importer --config importer.config.json"
 	}
 }

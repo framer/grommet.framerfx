@@ -25,5 +25,6 @@ addPropertyControls(Paragraph, {
   color: merge(controls.color, {}),
   responsive: merge(controls.responsive, {}),
   size: merge(controls.size, {}),
-  textAlign: merge(controls.textAlign, {})
+  textAlign: merge(controls.textAlign, {}),
+  placeholder: merge(controls.placeholder, {})
 });

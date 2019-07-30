@@ -1,0 +1,4849 @@
+{
+    "packageName": "grommet",
+    "rootFiles": [
+        "node_modules/grommet/index.d.ts"
+    ],
+    "additionalImports": [],
+    "out": "code/",
+    "components": {
+        "Accordion": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "activeIndex": {
+                    "type": "number"
+                },
+                "animate": {
+                    "type": "boolean"
+                },
+                "onActive": {
+                    "type": "unsupported"
+                },
+                "multiple": {
+                    "type": "boolean"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "AccordionPanel": {
+            "ignore": false,
+            "props": {
+                "label": {
+                    "type": "string"
+                },
+                "header": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Anchor": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Box": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "align": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "baseline"
+                    ]
+                },
+                "alignContent": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "between",
+                        "around"
+                    ]
+                },
+                "animation": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "fadeIn",
+                        "fadeOut",
+                        "jiggle",
+                        "pulse",
+                        "slideUp",
+                        "slideDown",
+                        "slideLeft",
+                        "slideRight",
+                        "zoomIn",
+                        "zoomOut"
+                    ]
+                },
+                "background": {
+                    "type": "string"
+                },
+                "basis": {
+                    "type": "string"
+                },
+                "border": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical",
+                        "all",
+                        "top",
+                        "left",
+                        "bottom",
+                        "right"
+                    ]
+                },
+                "direction": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "row",
+                        "column",
+                        "row-responsive",
+                        "row-reverse",
+                        "column-reverse"
+                    ]
+                },
+                "elevation": {
+                    "type": "string"
+                },
+                "flex": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "grow",
+                        "shrink"
+                    ]
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "height": {
+                    "type": "string"
+                },
+                "justify": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "between",
+                        "around",
+                        "evenly"
+                    ]
+                },
+                "overflow": {
+                    "type": "string"
+                },
+                "pad": {
+                    "type": "string"
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "round": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "width": {
+                    "type": "string"
+                },
+                "wrap": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "reverse"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Button": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "hoverIndicator": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "target": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "_self",
+                        "_blank",
+                        "_parent",
+                        "_top"
+                    ]
+                },
+                "icon": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "primary": {
+                    "type": "boolean"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Calendar": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "animate": {
+                    "type": "boolean"
+                },
+                "bounds": {
+                    "type": "array",
+                    "of": {
+                        "type": "string",
+                        "name": ""
+                    }
+                },
+                "date": {
+                    "type": "string"
+                },
+                "dates": {
+                    "type": "unsupported"
+                },
+                "daysOfWeek": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "unsupported"
+                },
+                "firstDayOfWeek": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "0",
+                        "1"
+                    ]
+                },
+                "header": {
+                    "type": "unsupported"
+                },
+                "locale": {
+                    "type": "string"
+                },
+                "onReference": {
+                    "type": "unsupported"
+                },
+                "range": {
+                    "type": "boolean"
+                },
+                "reference": {
+                    "type": "string"
+                },
+                "showAdjacentDays": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Carousel": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "fill": {
+                    "type": "boolean"
+                },
+                "play": {
+                    "type": "number"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Chart": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "bounds": {
+                    "type": "unsupported"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "onClick": {
+                    "type": "unsupported"
+                },
+                "onHover": {
+                    "type": "unsupported"
+                },
+                "overflow": {
+                    "type": "boolean"
+                },
+                "round": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "thickness": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "area",
+                        "line",
+                        "bar"
+                    ]
+                },
+                "values": {
+                    "type": "unsupported"
+                }
+            }
+        },
+        "CheckBox": {
+            "ignore": false,
+            "props": {
+                "checked": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "toggle": {
+                    "type": "boolean"
+                },
+                "indeterminate": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Clock": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "hourLimit": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "12",
+                        "24"
+                    ]
+                },
+                "precision": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "hours",
+                        "minutes",
+                        "seconds"
+                    ]
+                },
+                "run": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "backward",
+                        "forward"
+                    ]
+                },
+                "size": {
+                    "type": "string"
+                },
+                "time": {
+                    "type": "string"
+                }
+            }
+        },
+        "Collapsible": {
+            "ignore": false,
+            "props": {
+                "open": {
+                    "type": "boolean"
+                },
+                "direction": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "DataTable": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "columns": {
+                    "type": "unsupported"
+                },
+                "data": {
+                    "type": "unsupported"
+                },
+                "groupBy": {
+                    "type": "string"
+                },
+                "onMore": {
+                    "type": "unsupported"
+                },
+                "onSearch": {
+                    "type": "unsupported"
+                },
+                "primaryKey": {
+                    "type": "string"
+                },
+                "resizeable": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "sortable": {
+                    "type": "boolean"
+                },
+                "step": {
+                    "type": "number"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Diagram": {
+            "ignore": false,
+            "props": {
+                "connections": {
+                    "type": "unsupported"
+                }
+            }
+        },
+        "Distribution": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "fill": {
+                    "type": "boolean"
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "values": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Drop": {
+            "ignore": false,
+            "props": {
+                "align": {
+                    "type": "unsupported"
+                },
+                "elevation": {
+                    "type": "string"
+                },
+                "onClickOutside": {
+                    "type": "unsupported"
+                },
+                "onEsc": {
+                    "type": "unsupported"
+                },
+                "overflow": {
+                    "type": "string"
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "restrictFocus": {
+                    "type": "boolean"
+                },
+                "stretch": {
+                    "type": "boolean"
+                },
+                "target": {
+                    "type": "unsupported"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "DropButton": {
+            "ignore": false,
+            "props": {
+                "dropAlign": {
+                    "type": "unsupported"
+                },
+                "dropContent": {
+                    "type": "unsupported"
+                },
+                "dropTarget": {
+                    "type": "unsupported"
+                },
+                "dropProps": {
+                    "type": "unsupported"
+                },
+                "onClose": {
+                    "type": "unsupported"
+                },
+                "onOpen": {
+                    "type": "unsupported"
+                },
+                "open": {
+                    "type": "boolean"
+                },
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "hoverIndicator": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "target": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "_self",
+                        "_blank",
+                        "_parent",
+                        "_top"
+                    ]
+                },
+                "icon": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "onClick": {
+                    "type": "unsupported"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "primary": {
+                    "type": "boolean"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "button",
+                        "reset",
+                        "submit"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                }
+            }
+        },
+        "Form": {
+            "ignore": false,
+            "props": {
+                "errors": {
+                    "type": "unsupported"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "value": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "FormField": {
+            "ignore": false,
+            "props": {
+                "error": {
+                    "type": "string"
+                },
+                "help": {
+                    "type": "string"
+                },
+                "htmlFor": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "pad": {
+                    "type": "boolean"
+                },
+                "component": {
+                    "type": "unsupported"
+                },
+                "validate": {
+                    "type": "unsupported"
+                },
+                "checked": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Grid": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "align": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "alignContent": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "between",
+                        "around"
+                    ]
+                },
+                "areas": {
+                    "type": "unsupported"
+                },
+                "columns": {
+                    "type": "string"
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "justify": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "justifyContent": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "between",
+                        "around"
+                    ]
+                },
+                "rows": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Grommet": {
+            "ignore": false,
+            "props": {
+                "cssVars": {
+                    "type": "boolean"
+                },
+                "full": {
+                    "type": "boolean"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "theme": {
+                    "type": "unsupported"
+                },
+                "userAgent": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Heading": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "level": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "1",
+                        "2",
+                        "3",
+                        "4",
+                        "5",
+                        "6"
+                    ]
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "textAlign": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end"
+                    ]
+                },
+                "truncate": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Image": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "fit": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "cover",
+                        "contain"
+                    ]
+                },
+                "fallback": {
+                    "type": "string"
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "opacity": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "InfiniteScroll": {
+            "ignore": false,
+            "props": {
+                "children": {
+                    "type": "unsupported"
+                },
+                "items": {
+                    "type": "unsupported"
+                },
+                "onMore": {
+                    "type": "unsupported"
+                },
+                "renderMarker": {
+                    "type": "unsupported"
+                },
+                "replace": {
+                    "type": "boolean"
+                },
+                "scrollableAncestor": {
+                    "type": "string"
+                },
+                "show": {
+                    "type": "number"
+                },
+                "step": {
+                    "type": "number"
+                }
+            }
+        },
+        "Keyboard": {
+            "ignore": false,
+            "props": {
+                "target": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "component",
+                        "document"
+                    ]
+                },
+                "onBackspace": {
+                    "type": "unsupported"
+                },
+                "onComma": {
+                    "type": "unsupported"
+                },
+                "onDown": {
+                    "type": "unsupported"
+                },
+                "onEnter": {
+                    "type": "unsupported"
+                },
+                "onEsc": {
+                    "type": "unsupported"
+                },
+                "onKeyDown": {
+                    "type": "unsupported"
+                },
+                "onLeft": {
+                    "type": "unsupported"
+                },
+                "onRight": {
+                    "type": "unsupported"
+                },
+                "onShift": {
+                    "type": "unsupported"
+                },
+                "onSpace": {
+                    "type": "unsupported"
+                },
+                "onTab": {
+                    "type": "unsupported"
+                },
+                "onUp": {
+                    "type": "unsupported"
+                }
+            }
+        },
+        "Layer": {
+            "ignore": false,
+            "props": {
+                "animate": {
+                    "type": "boolean"
+                },
+                "animation": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "none",
+                        "fadeIn",
+                        "slide"
+                    ]
+                },
+                "full": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "modal": {
+                    "type": "boolean"
+                },
+                "onClickOutside": {
+                    "type": "unsupported"
+                },
+                "onEsc": {
+                    "type": "unsupported"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "position": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "center",
+                        "hidden",
+                        "top",
+                        "left",
+                        "bottom",
+                        "right",
+                        "bottom-left",
+                        "bottom-right",
+                        "top-left",
+                        "top-right"
+                    ]
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Markdown": {
+            "ignore": false,
+            "props": {
+                "components": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "MaskedInput": {
+            "ignore": false,
+            "props": {
+                "mask": {
+                    "type": "unsupported"
+                },
+                "checked": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Menu": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "dropAlign": {
+                    "type": "unsupported"
+                },
+                "dropBackground": {
+                    "type": "string"
+                },
+                "dropTarget": {
+                    "type": "unsupported"
+                },
+                "dropProps": {
+                    "type": "unsupported"
+                },
+                "justifyContent": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "between",
+                        "around"
+                    ]
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "items": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "open": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Meter": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "background": {
+                    "type": "string"
+                },
+                "round": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "thickness": {
+                    "type": "string"
+                },
+                "type": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "circle",
+                        "bar"
+                    ]
+                },
+                "values": {
+                    "type": "unsupported"
+                }
+            }
+        },
+        "Paragraph": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "textAlign": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "RadioButton": {
+            "ignore": false,
+            "props": {
+                "checked": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "RadioButtonGroup": {
+            "ignore": false,
+            "props": {
+                "name": {
+                    "type": "string"
+                },
+                "onChange": {
+                    "type": "unsupported"
+                },
+                "options": {
+                    "type": "unsupported"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "align": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "baseline"
+                    ]
+                },
+                "alignContent": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch",
+                        "between",
+                        "around"
+                    ]
+                },
+                "animation": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "fadeIn",
+                        "fadeOut",
+                        "jiggle",
+                        "pulse",
+                        "slideUp",
+                        "slideDown",
+                        "slideLeft",
+                        "slideRight",
+                        "zoomIn",
+                        "zoomOut"
+                    ]
+                },
+                "background": {
+                    "type": "string"
+                },
+                "basis": {
+                    "type": "string"
+                },
+                "border": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical",
+                        "all",
+                        "top",
+                        "left",
+                        "bottom",
+                        "right"
+                    ]
+                },
+                "direction": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "row",
+                        "column",
+                        "row-responsive",
+                        "row-reverse",
+                        "column-reverse"
+                    ]
+                },
+                "elevation": {
+                    "type": "string"
+                },
+                "flex": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "grow",
+                        "shrink"
+                    ]
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "height": {
+                    "type": "string"
+                },
+                "justify": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "between",
+                        "around",
+                        "evenly"
+                    ]
+                },
+                "overflow": {
+                    "type": "string"
+                },
+                "pad": {
+                    "type": "string"
+                },
+                "responsive": {
+                    "type": "boolean"
+                },
+                "round": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "width": {
+                    "type": "string"
+                },
+                "wrap": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "reverse"
+                    ]
+                }
+            }
+        },
+        "RangeInput": {
+            "ignore": false,
+            "props": {
+                "checked": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "RangeSelector": {
+            "ignore": false,
+            "props": {
+                "color": {
+                    "type": "string"
+                },
+                "direction": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "invert": {
+                    "type": "boolean"
+                },
+                "max": {
+                    "type": "number"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "min": {
+                    "type": "number"
+                },
+                "opacity": {
+                    "type": "string"
+                },
+                "round": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "step": {
+                    "type": "number"
+                },
+                "values": {
+                    "type": "array",
+                    "of": {
+                        "type": "number",
+                        "name": ""
+                    }
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "RoutedAnchor": {
+            "ignore": false,
+            "props": {
+                "path": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "replace",
+                        "push"
+                    ]
+                },
+                "color": {
+                    "type": "string"
+                },
+                "onClick": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "icon": {
+                    "type": "unsupported"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                }
+            }
+        },
+        "RoutedButton": {
+            "ignore": false,
+            "props": {
+                "path": {
+                    "type": "string"
+                },
+                "method": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "replace",
+                        "push"
+                    ]
+                },
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "active": {
+                    "type": "boolean"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "fill": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "gap": {
+                    "type": "string"
+                },
+                "hoverIndicator": {
+                    "type": "string"
+                },
+                "href": {
+                    "type": "string"
+                },
+                "target": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "_self",
+                        "_blank",
+                        "_parent",
+                        "_top"
+                    ]
+                },
+                "icon": {
+                    "type": "unsupported"
+                },
+                "label": {
+                    "type": "string"
+                },
+                "onClick": {
+                    "type": "unsupported"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "primary": {
+                    "type": "boolean"
+                },
+                "reverse": {
+                    "type": "boolean"
+                },
+                "type": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "button",
+                        "reset",
+                        "submit"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                }
+            }
+        },
+        "Select": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "children": {
+                    "type": "unsupported"
+                },
+                "closeOnChange": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "unsupported"
+                },
+                "disabledKey": {
+                    "type": "string"
+                },
+                "dropAlign": {
+                    "type": "unsupported"
+                },
+                "dropHeight": {
+                    "type": "string"
+                },
+                "dropTarget": {
+                    "type": "unsupported"
+                },
+                "dropProps": {
+                    "type": "unsupported"
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "icon": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "labelKey": {
+                    "type": "string"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "multiple": {
+                    "type": "boolean"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "onChange": {
+                    "type": "unsupported"
+                },
+                "onClose": {
+                    "type": "unsupported"
+                },
+                "onMore": {
+                    "type": "unsupported"
+                },
+                "onOpen": {
+                    "type": "unsupported"
+                },
+                "onSearch": {
+                    "type": "unsupported"
+                },
+                "options": {
+                    "type": "unsupported"
+                },
+                "open": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "replace": {
+                    "type": "boolean"
+                },
+                "searchPlaceholder": {
+                    "type": "string"
+                },
+                "selected": {
+                    "type": "number"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "value": {
+                    "type": "string"
+                },
+                "valueLabel": {
+                    "type": "string"
+                },
+                "valueKey": {
+                    "type": "string"
+                },
+                "emptySearchMessage": {
+                    "type": "string"
+                }
+            }
+        },
+        "SkipLink": {
+            "ignore": false,
+            "props": {
+                "id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                }
+            }
+        },
+        "SkipLinks": {
+            "ignore": false,
+            "props": {
+                "children": {
+                    "type": "string"
+                },
+                "messages": {
+                    "type": "unsupported"
+                }
+            }
+        },
+        "SkipLinkTarget": {
+            "ignore": false,
+            "props": {
+                "id": {
+                    "type": "string"
+                },
+                "label": {
+                    "type": "string"
+                }
+            }
+        },
+        "Stack": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "anchor": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "center",
+                        "top",
+                        "left",
+                        "bottom",
+                        "right",
+                        "bottom-left",
+                        "bottom-right",
+                        "top-left",
+                        "top-right"
+                    ]
+                },
+                "fill": {
+                    "type": "boolean"
+                },
+                "guidingChild": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "first",
+                        "last"
+                    ]
+                },
+                "interactiveChild": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "first",
+                        "last"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Table": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "caption": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TableBody": {
+            "ignore": false,
+            "props": {
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TableCell": {
+            "ignore": false,
+            "props": {
+                "plain": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "verticalAlign": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "top",
+                        "bottom",
+                        "middle"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TableFooter": {
+            "ignore": false,
+            "props": {
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TableHeader": {
+            "ignore": false,
+            "props": {
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TableRow": {
+            "ignore": false,
+            "props": {
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Tab": {
+            "ignore": false,
+            "props": {
+                "plain": {
+                    "type": "boolean"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Tabs": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "activeIndex": {
+                    "type": "number"
+                },
+                "flex": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "grow",
+                        "shrink"
+                    ]
+                },
+                "justify": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end"
+                    ]
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "onActive": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "Text": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "tag": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "as": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "symbol",
+                        "object",
+                        "div",
+                        "small",
+                        "time",
+                        "link",
+                        "menu",
+                        "dialog",
+                        "text",
+                        "a",
+                        "style",
+                        "title",
+                        "abbr",
+                        "address",
+                        "area",
+                        "article",
+                        "aside",
+                        "audio",
+                        "b",
+                        "base",
+                        "bdi",
+                        "bdo",
+                        "big",
+                        "blockquote",
+                        "body",
+                        "br",
+                        "button",
+                        "canvas",
+                        "caption",
+                        "cite",
+                        "code",
+                        "col",
+                        "colgroup",
+                        "data",
+                        "datalist",
+                        "dd",
+                        "del",
+                        "details",
+                        "dfn",
+                        "dl",
+                        "dt",
+                        "em",
+                        "embed",
+                        "fieldset",
+                        "figcaption",
+                        "figure",
+                        "footer",
+                        "form",
+                        "h1",
+                        "h2",
+                        "h3",
+                        "h4",
+                        "h5",
+                        "h6",
+                        "head",
+                        "header",
+                        "hgroup",
+                        "hr",
+                        "html",
+                        "i",
+                        "iframe",
+                        "img",
+                        "input",
+                        "ins",
+                        "kbd",
+                        "keygen",
+                        "label",
+                        "legend",
+                        "li",
+                        "main",
+                        "map",
+                        "mark",
+                        "menuitem",
+                        "meta",
+                        "meter",
+                        "nav",
+                        "noindex",
+                        "noscript",
+                        "ol",
+                        "optgroup",
+                        "option",
+                        "output",
+                        "p",
+                        "param",
+                        "picture",
+                        "pre",
+                        "progress",
+                        "q",
+                        "rp",
+                        "rt",
+                        "ruby",
+                        "s",
+                        "samp",
+                        "script",
+                        "section",
+                        "select",
+                        "source",
+                        "span",
+                        "strong",
+                        "sub",
+                        "summary",
+                        "sup",
+                        "table",
+                        "tbody",
+                        "td",
+                        "textarea",
+                        "tfoot",
+                        "th",
+                        "thead",
+                        "tr",
+                        "track",
+                        "u",
+                        "ul",
+                        "var",
+                        "video",
+                        "wbr",
+                        "webview",
+                        "svg",
+                        "animate",
+                        "animateMotion",
+                        "animateTransform",
+                        "circle",
+                        "clipPath",
+                        "defs",
+                        "desc",
+                        "ellipse",
+                        "feBlend",
+                        "feColorMatrix",
+                        "feComponentTransfer",
+                        "feComposite",
+                        "feConvolveMatrix",
+                        "feDiffuseLighting",
+                        "feDisplacementMap",
+                        "feDistantLight",
+                        "feFlood",
+                        "feFuncA",
+                        "feFuncB",
+                        "feFuncG",
+                        "feFuncR",
+                        "feGaussianBlur",
+                        "feImage",
+                        "feMerge",
+                        "feMergeNode",
+                        "feMorphology",
+                        "feOffset",
+                        "fePointLight",
+                        "feSpecularLighting",
+                        "feSpotLight",
+                        "feTile",
+                        "feTurbulence",
+                        "filter",
+                        "foreignObject",
+                        "g",
+                        "image",
+                        "line",
+                        "linearGradient",
+                        "marker",
+                        "mask",
+                        "metadata",
+                        "mpath",
+                        "path",
+                        "pattern",
+                        "polygon",
+                        "polyline",
+                        "radialGradient",
+                        "rect",
+                        "stop",
+                        "switch",
+                        "textPath",
+                        "tspan",
+                        "use",
+                        "view"
+                    ]
+                },
+                "textAlign": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end"
+                    ]
+                },
+                "truncate": {
+                    "type": "boolean"
+                },
+                "weight": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "normal",
+                        "bold"
+                    ]
+                },
+                "wordBreak": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "normal",
+                        "break-all",
+                        "keep-all",
+                        "break-word"
+                    ]
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "TextArea": {
+            "ignore": false,
+            "props": {
+                "fill": {
+                    "type": "boolean"
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "resize": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "horizontal",
+                        "vertical"
+                    ]
+                },
+                "size": {
+                    "type": "string"
+                },
+                "disabled": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "TextInput": {
+            "ignore": false,
+            "props": {
+                "dropAlign": {
+                    "type": "unsupported"
+                },
+                "dropHeight": {
+                    "type": "string"
+                },
+                "dropTarget": {
+                    "type": "unsupported"
+                },
+                "dropProps": {
+                    "type": "unsupported"
+                },
+                "focusIndicator": {
+                    "type": "boolean"
+                },
+                "messages": {
+                    "type": "unsupported"
+                },
+                "onSelect": {
+                    "type": "unsupported"
+                },
+                "onSuggestionsOpen": {
+                    "type": "unsupported"
+                },
+                "onSuggestionsClose": {
+                    "type": "unsupported"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "plain": {
+                    "type": "boolean"
+                },
+                "size": {
+                    "type": "string"
+                },
+                "suggestions": {
+                    "type": "unsupported"
+                },
+                "disabled": {
+                    "type": "boolean"
+                },
+                "checked": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Video": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "fit": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "cover",
+                        "contain"
+                    ]
+                },
+                "mute": {
+                    "type": "boolean"
+                },
+                "placeholder": {
+                    "type": "string"
+                }
+            }
+        },
+        "WorldMap": {
+            "ignore": false,
+            "props": {
+                "a11yTitle": {
+                    "type": "string"
+                },
+                "alignSelf": {
+                    "type": "enum",
+                    "possibleValues": [
+                        "start",
+                        "center",
+                        "end",
+                        "stretch"
+                    ]
+                },
+                "gridArea": {
+                    "type": "string"
+                },
+                "margin": {
+                    "type": "string"
+                },
+                "continents": {
+                    "type": "unsupported"
+                },
+                "onSelectPlace": {
+                    "type": "unsupported"
+                },
+                "places": {
+                    "type": "unsupported"
+                },
+                "hoverColor": {
+                    "type": "string"
+                }
+            }
+        },
+        "AnnounceContext": {
+            "ignore": false,
+            "props": {}
+        },
+        "ResponsiveContext": {
+            "ignore": false,
+            "props": {
+                "length": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

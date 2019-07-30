@@ -26,5 +26,6 @@ addPropertyControls(Anchor, {
   label: merge(controls.label, {}),
   reverse: merge(controls.reverse, {}),
   size: merge(controls.size, {}),
-  as: merge(controls.as, {})
+  as: merge(controls.as, {}),
+  placeholder: merge(controls.placeholder, {})
 });

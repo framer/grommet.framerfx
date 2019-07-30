@@ -24,6 +24,7 @@ addPropertyControls(Button, {
   margin: merge(controls.margin, {}),
   active: merge(controls.active, {}),
   color: merge(controls.color, {}),
+  disabled: merge(controls.disabled, {}),
   fill: merge(controls.fill, {}),
   focusIndicator: merge(controls.focusIndicator, {}),
   gap: merge(controls.gap, {}),
@@ -34,5 +35,6 @@ addPropertyControls(Button, {
   plain: merge(controls.plain, {}),
   primary: merge(controls.primary, {}),
   reverse: merge(controls.reverse, {}),
-  as: merge(controls.as, {})
+  as: merge(controls.as, {}),
+  placeholder: merge(controls.placeholder, {})
 });

@@ -23,5 +23,7 @@ addPropertyControls(FormField, {
   htmlFor: merge(controls.htmlFor, {}),
   label: merge(controls.label, {}),
   pad: merge(controls.pad, {}),
+  checked: merge(controls.checked, {}),
+  disabled: merge(controls.disabled, {}),
   placeholder: merge(controls.placeholder, {})
 });

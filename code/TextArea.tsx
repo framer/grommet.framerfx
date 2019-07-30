@@ -20,7 +20,9 @@ TextArea.defaultProps = {
 addPropertyControls(TextArea, {
   fill: merge(controls.fill, {}),
   focusIndicator: merge(controls.focusIndicator, {}),
+  placeholder: merge(controls.placeholder, {}),
   plain: merge(controls.plain, {}),
   resize: merge(controls.resize, {}),
-  size: merge(controls.size, {})
+  size: merge(controls.size, {}),
+  disabled: merge(controls.disabled, {})
 });

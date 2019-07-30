@@ -23,5 +23,6 @@ addPropertyControls(Video, {
   gridArea: merge(controls.gridArea, {}),
   margin: merge(controls.margin, {}),
   fit: merge(controls.fit, {}),
-  mute: merge(controls.mute, {})
+  mute: merge(controls.mute, {}),
+  placeholder: merge(controls.placeholder, {})
 });

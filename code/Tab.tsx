@@ -19,5 +19,6 @@ Tab.defaultProps = {
 
 addPropertyControls(Tab, {
   plain: merge(controls.plain, {}),
+  disabled: merge(controls.disabled, {}),
   placeholder: merge(controls.placeholder, {})
 });

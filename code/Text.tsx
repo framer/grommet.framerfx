@@ -29,5 +29,6 @@ addPropertyControls(Text, {
   textAlign: merge(controls.textAlign, {}),
   truncate: merge(controls.truncate, {}),
   weight: merge(controls.weight, {}),
-  wordBreak: merge(controls.wordBreak, {})
+  wordBreak: merge(controls.wordBreak, {}),
+  placeholder: merge(controls.placeholder, {})
 });
