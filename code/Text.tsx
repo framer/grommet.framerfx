@@ -4,12 +4,15 @@ import { ControlType, PropertyControls, addPropertyControls } from "framer";
 import { controls, merge } from "./inferredProps/Text";
 
 const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
+  overflow: "hidden"
 };
 
-export function Text(props) {
-  return <System.Text {...props} style={style} />;
+export function Text({ ["children"]: _, label, ...props }) {
+  return (
+    <System.Text {...props} style={style}>
+      {label}
+    </System.Text>
+  );
 }
 
 Text.defaultProps = {
@@ -18,17 +21,13 @@ Text.defaultProps = {
 };
 
 addPropertyControls(Text, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
   color: merge(controls.color, {}),
-  size: merge(controls.size, {}),
-  tag: merge(controls.tag, {}),
-  as: merge(controls.as, {}),
-  textAlign: merge(controls.textAlign, {}),
+  size: {
+    type: ControlType.Enum,
+    options: ["xsmall", "small", "medium", "large", "xlarge", "xxlarge"]
+  },
+  label: { type: ControlType.String, defaultValue: "Text" },
   truncate: merge(controls.truncate, {}),
   weight: merge(controls.weight, {}),
-  wordBreak: merge(controls.wordBreak, {}),
-  placeholder: merge(controls.placeholder, {})
+  wordBreak: merge(controls.wordBreak, {})
 });

@@ -94,136 +94,8 @@
       }
     },
     "Box": {
-      "ignore": false,
-      "props": {
-        "a11yTitle": {
-          "type": "string"
-        },
-        "alignSelf": {
-          "type": "enum",
-          "possibleValues": ["start", "center", "end", "stretch"]
-        },
-        "gridArea": {
-          "type": "string"
-        },
-        "margin": {
-          "type": "string"
-        },
-        "align": {
-          "type": "enum",
-          "possibleValues": ["start", "center", "end", "stretch", "baseline"]
-        },
-        "alignContent": {
-          "type": "enum",
-          "possibleValues": [
-            "start",
-            "center",
-            "end",
-            "stretch",
-            "between",
-            "around"
-          ]
-        },
-        "animation": {
-          "type": "enum",
-          "possibleValues": [
-            "fadeIn",
-            "fadeOut",
-            "jiggle",
-            "pulse",
-            "slideUp",
-            "slideDown",
-            "slideLeft",
-            "slideRight",
-            "zoomIn",
-            "zoomOut"
-          ]
-        },
-        "background": {
-          "type": "string"
-        },
-        "basis": {
-          "type": "string"
-        },
-        "border": {
-          "type": "enum",
-          "possibleValues": [
-            "horizontal",
-            "vertical",
-            "all",
-            "top",
-            "left",
-            "bottom",
-            "right"
-          ]
-        },
-        "direction": {
-          "type": "enum",
-          "possibleValues": [
-            "row",
-            "column",
-            "row-responsive",
-            "row-reverse",
-            "column-reverse"
-          ]
-        },
-        "elevation": {
-          "type": "string"
-        },
-        "flex": {
-          "type": "enum",
-          "possibleValues": ["grow", "shrink"]
-        },
-        "fill": {
-          "type": "enum",
-          "possibleValues": ["horizontal", "vertical"]
-        },
-        "gap": {
-          "type": "string"
-        },
-        "height": {
-          "type": "string"
-        },
-        "justify": {
-          "type": "enum",
-          "possibleValues": [
-            "start",
-            "center",
-            "end",
-            "between",
-            "around",
-            "evenly"
-          ]
-        },
-        "overflow": {
-          "type": "string"
-        },
-        "pad": {
-          "type": "string"
-        },
-        "responsive": {
-          "type": "boolean"
-        },
-        "round": {
-          "type": "string"
-        },
-        "tag": {
-          "type": "string"
-        },
-        "as": {
-          "type": "string"
-        },
-        "width": {
-          "type": "string"
-        },
-        "wrap": {
-          "type": "enum",
-          "possibleValues": ["reverse"]
-        },
-        "placeholder": {
-          "type": "string"
-        }
-      }
+      "ignore": true,
+      "props": {}
     },
     "Button": {
       "ignore": false,
@@ -566,12 +438,8 @@
       }
     },
     "Diagram": {
-      "ignore": false,
-      "props": {
-        "connections": {
-          "type": "unsupported"
-        }
-      }
+      "ignore": true,
+      "props": {}
     },
     "Distribution": {
       "ignore": false,
@@ -939,78 +807,12 @@
       }
     },
     "InfiniteScroll": {
-      "ignore": false,
-      "props": {
-        "children": {
-          "type": "unsupported"
-        },
-        "items": {
-          "type": "unsupported"
-        },
-        "onMore": {
-          "type": "unsupported"
-        },
-        "renderMarker": {
-          "type": "unsupported"
-        },
-        "replace": {
-          "type": "boolean"
-        },
-        "scrollableAncestor": {
-          "type": "string"
-        },
-        "show": {
-          "type": "number"
-        },
-        "step": {
-          "type": "number"
-        }
-      }
+      "ignore": true,
+      "props": {}
     },
     "Keyboard": {
-      "ignore": false,
-      "props": {
-        "target": {
-          "type": "enum",
-          "possibleValues": ["component", "document"]
-        },
-        "onBackspace": {
-          "type": "unsupported"
-        },
-        "onComma": {
-          "type": "unsupported"
-        },
-        "onDown": {
-          "type": "unsupported"
-        },
-        "onEnter": {
-          "type": "unsupported"
-        },
-        "onEsc": {
-          "type": "unsupported"
-        },
-        "onKeyDown": {
-          "type": "unsupported"
-        },
-        "onLeft": {
-          "type": "unsupported"
-        },
-        "onRight": {
-          "type": "unsupported"
-        },
-        "onShift": {
-          "type": "unsupported"
-        },
-        "onSpace": {
-          "type": "unsupported"
-        },
-        "onTab": {
-          "type": "unsupported"
-        },
-        "onUp": {
-          "type": "unsupported"
-        }
-      }
+      "ignore": true,
+      "props": {}
     },
     "Layer": {
       "ignore": false,
@@ -1684,37 +1486,14 @@
       }
     },
     "SkipLink": {
-      "ignore": false,
-      "props": {
-        "id": {
-          "type": "string"
-        },
-        "label": {
-          "type": "string"
-        }
-      }
+      "ignore": true
     },
     "SkipLinks": {
-      "ignore": false,
-      "props": {
-        "children": {
-          "type": "string"
-        },
-        "messages": {
-          "type": "unsupported"
-        }
-      }
+      "ignore": true
     },
     "SkipLinkTarget": {
-      "ignore": false,
-      "props": {
-        "id": {
-          "type": "string"
-        },
-        "label": {
-          "type": "string"
-        }
-      }
+      "ignore": true,
+      "props": {}
     },
     "Stack": {
       "ignore": false,

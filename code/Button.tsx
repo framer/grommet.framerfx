@@ -8,8 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Button(props) {
-  return <System.Button {...props} style={style} />;
+export function Button({ ["children"]: _, ...props }) {
+  return <System.Button {...props} />;
 }
 
 Button.defaultProps = {
@@ -18,23 +18,17 @@ Button.defaultProps = {
 };
 
 addPropertyControls(Button, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
   active: merge(controls.active, {}),
   color: merge(controls.color, {}),
   disabled: merge(controls.disabled, {}),
-  fill: merge(controls.fill, {}),
+  fill: merge(controls.fill, {
+    options: ["horizontal", "vertical", "true"],
+    defaultValue: "true"
+  }),
   focusIndicator: merge(controls.focusIndicator, {}),
-  gap: merge(controls.gap, {}),
   hoverIndicator: merge(controls.hoverIndicator, {}),
   href: merge(controls.href, {}),
-  target: merge(controls.target, {}),
-  label: merge(controls.label, {}),
+  label: merge(controls.label, { defaultValue: "Button" }),
   plain: merge(controls.plain, {}),
-  primary: merge(controls.primary, {}),
-  reverse: merge(controls.reverse, {}),
-  as: merge(controls.as, {}),
-  placeholder: merge(controls.placeholder, {})
+  primary: merge(controls.primary, {})
 });

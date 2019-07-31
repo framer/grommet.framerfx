@@ -8,21 +8,25 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Video(props) {
-  return <System.Video {...props} style={style} />;
+export function Video({ src, ...props }) {
+  return (
+    <System.Video {...props}>
+      <source key="video" src={src} type="video/mp4" />
+    </System.Video>
+  );
 }
 
 Video.defaultProps = {
-  width: 150,
-  height: 50
+  width: 420,
+  height: 380
 };
 
 addPropertyControls(Video, {
-  a11yTitle: merge(controls.a11yTitle, {}),
+  src: {
+    type: ControlType.String,
+    title: "Source",
+    defaultValue: "https://www.krijnrijshouwer.com/file/example.mp4"
+  },
   alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  fit: merge(controls.fit, {}),
-  mute: merge(controls.mute, {}),
-  placeholder: merge(controls.placeholder, {})
+  mute: merge(controls.mute, {})
 });
