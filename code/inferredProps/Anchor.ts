@@ -7,6 +7,7 @@ export type Controls = {
   gridArea: ControlDescription;
   margin: ControlDescription;
   color: ControlDescription;
+  href: ControlDescription;
   label: ControlDescription;
   reverse: ControlDescription;
   size: ControlDescription;
@@ -28,6 +29,7 @@ export const controls: Controls = {
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
   color: { title: "Color", type: ControlType.String },
+  href: { title: "Href", type: ControlType.String },
   label: { title: "Label", type: ControlType.String },
   reverse: { title: "Reverse", type: ControlType.Boolean },
   size: { title: "Size", type: ControlType.String },

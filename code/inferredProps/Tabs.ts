@@ -7,6 +7,7 @@ export type Controls = {
   gridArea: ControlDescription;
   margin: ControlDescription;
   activeIndex: ControlDescription;
+  children: ControlDescription;
   flex: ControlDescription;
   justify: ControlDescription;
   placeholder: ControlDescription;
@@ -26,6 +27,7 @@ export const controls: Controls = {
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
   activeIndex: { title: "ActiveIndex", type: ControlType.Number },
+  children: { title: "Children", type: ControlType.String },
   flex: {
     title: "Flex",
     options: ["grow", "shrink"],

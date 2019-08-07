@@ -6,6 +6,7 @@ export type Controls = {
   alignSelf: ControlDescription;
   gridArea: ControlDescription;
   margin: ControlDescription;
+  children: ControlDescription;
   fill: ControlDescription;
   gap: ControlDescription;
   placeholder: ControlDescription;
@@ -24,6 +25,7 @@ export const controls: Controls = {
   },
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
+  children: { title: "Children", type: ControlType.String },
   fill: { title: "Fill", type: ControlType.Boolean },
   gap: { title: "Gap", type: ControlType.String },
   placeholder: { title: "Placeholder", type: ControlType.String }

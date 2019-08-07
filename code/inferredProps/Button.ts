@@ -19,6 +19,7 @@ export type Controls = {
   plain: ControlDescription;
   primary: ControlDescription;
   reverse: ControlDescription;
+  type: ControlDescription;
   as: ControlDescription;
   placeholder: ControlDescription;
 };
@@ -59,6 +60,7 @@ export const controls: Controls = {
   plain: { title: "Plain", type: ControlType.Boolean },
   primary: { title: "Primary", type: ControlType.Boolean },
   reverse: { title: "Reverse", type: ControlType.Boolean },
+  type: { title: "Type", type: ControlType.String },
   as: { title: "As", type: ControlType.String },
   placeholder: { title: "Placeholder", type: ControlType.String }
 };

@@ -11,6 +11,7 @@ export type Controls = {
   run: ControlDescription;
   size: ControlDescription;
   time: ControlDescription;
+  type: ControlDescription;
 };
 
 /**
@@ -45,7 +46,8 @@ export const controls: Controls = {
     type: ControlType.Enum
   },
   size: { title: "Size", type: ControlType.String },
-  time: { title: "Time", type: ControlType.String }
+  time: { title: "Time", type: ControlType.String },
+  type: { title: "Type", type: ControlType.String }
 };
 
 export function merge(

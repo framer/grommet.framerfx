@@ -8,6 +8,7 @@ export type Controls = {
   margin: ControlDescription;
   activeIndex: ControlDescription;
   animate: ControlDescription;
+  children: ControlDescription;
   multiple: ControlDescription;
   placeholder: ControlDescription;
 };
@@ -27,6 +28,7 @@ export const controls: Controls = {
   margin: { title: "Margin", type: ControlType.String },
   activeIndex: { title: "ActiveIndex", type: ControlType.Number },
   animate: { title: "Animate", type: ControlType.Boolean },
+  children: { title: "Children", type: ControlType.String },
   multiple: { title: "Multiple", type: ControlType.Boolean },
   placeholder: { title: "Placeholder", type: ControlType.String }
 };

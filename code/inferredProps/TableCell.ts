@@ -3,6 +3,7 @@ import { ControlType, PropertyControls, ControlDescription } from "framer";
 
 export type Controls = {
   plain: ControlDescription;
+  scope: ControlDescription;
   size: ControlDescription;
   verticalAlign: ControlDescription;
   placeholder: ControlDescription;
@@ -13,6 +14,7 @@ export type Controls = {
  */
 export const controls: Controls = {
   plain: { title: "Plain", type: ControlType.Boolean },
+  scope: { title: "Scope", type: ControlType.String },
   size: { title: "Size", type: ControlType.String },
   verticalAlign: {
     title: "VerticalAlign",

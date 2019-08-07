@@ -6,7 +6,10 @@ export type Controls = {
   alignSelf: ControlDescription;
   gridArea: ControlDescription;
   margin: ControlDescription;
+  autoPlay: ControlDescription;
+  controls: ControlDescription;
   fit: ControlDescription;
+  loop: ControlDescription;
   mute: ControlDescription;
   placeholder: ControlDescription;
 };
@@ -24,12 +27,15 @@ export const controls: Controls = {
   },
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
+  autoPlay: { title: "AutoPlay", type: ControlType.Boolean },
+  controls: { title: "Controls", type: ControlType.Boolean },
   fit: {
     title: "Fit",
     options: ["cover", "contain"],
     optionTitles: ["Cover", "Contain"],
     type: ControlType.Enum
   },
+  loop: { title: "Loop", type: ControlType.Boolean },
   mute: { title: "Mute", type: ControlType.Boolean },
   placeholder: { title: "Placeholder", type: ControlType.String }
 };

@@ -6,6 +6,7 @@ export type Controls = {
   alignSelf: ControlDescription;
   gridArea: ControlDescription;
   margin: ControlDescription;
+  color: ControlDescription;
   hoverColor: ControlDescription;
 };
 
@@ -22,6 +23,7 @@ export const controls: Controls = {
   },
   gridArea: { title: "GridArea", type: ControlType.String },
   margin: { title: "Margin", type: ControlType.String },
+  color: { title: "Color", type: ControlType.String },
   hoverColor: { title: "HoverColor", type: ControlType.String }
 };
 
