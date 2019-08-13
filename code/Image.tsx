@@ -8,7 +8,7 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Image(props) {
+export function Image({ ["children"]: _, ...props }) {
   return <System.Image {...props} style={style} />;
 }
 
@@ -18,12 +18,9 @@ Image.defaultProps = {
 };
 
 addPropertyControls(Image, {
-  a11yTitle: merge(controls.a11yTitle, {}),
   alignSelf: merge(controls.alignSelf, {}),
   fit: merge(controls.fit, {}),
-  fallback: merge(controls.fallback, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  opacity: merge(controls.opacity, {}),
-  placeholder: merge(controls.placeholder, {})
+  src: { type: ControlType.Image },
+  fallback: { type: ControlType.Image },
+  opacity: { type: ControlType.Enum, options: ["weak", "medium", "strong"] }
 });

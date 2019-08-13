@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Chart(props) {
+// Expose in v2
+function Chart(props) {
   return <System.Chart {...props} style={style} />;
 }
 

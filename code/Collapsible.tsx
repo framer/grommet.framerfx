@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Collapsible(props) {
+// Expose is V2
+function Collapsible(props) {
   return <System.Collapsible {...props} style={style} />;
 }
 

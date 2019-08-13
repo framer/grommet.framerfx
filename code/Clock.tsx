@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Clock(props) {
+// Expose in v2
+function Clock(props) {
   return <System.Clock {...props} style={style} />;
 }
 

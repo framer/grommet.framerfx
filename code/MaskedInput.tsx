@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function MaskedInput(props) {
+// Expose in V2
+function MaskedInput(props) {
   return <System.MaskedInput {...props} style={style} />;
 }
 

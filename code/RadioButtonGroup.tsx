@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function RadioButtonGroup(props) {
+// Expose in V2
+function RadioButtonGroup(props) {
   return <System.RadioButtonGroup {...props} style={style} />;
 }
 

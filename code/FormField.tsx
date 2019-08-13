@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function FormField(props) {
+// Expose in V2
+function FormField(props) {
   return <System.FormField {...props} style={style} />;
 }
 

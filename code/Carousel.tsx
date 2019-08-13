@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Carousel(props) {
+// Expose in v2
+function Carousel(props) {
   return <System.Carousel {...props} style={style} />;
 }
 

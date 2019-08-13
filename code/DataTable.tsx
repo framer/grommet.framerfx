@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function DataTable(props) {
+// Expose in V2
+function DataTable(props) {
   return <System.DataTable {...props} style={style} />;
 }
 

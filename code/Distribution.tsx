@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Distribution(props) {
+// Expose in V2
+function Distribution(props) {
   return <System.Distribution {...props} style={style} />;
 }
 

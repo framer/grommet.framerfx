@@ -9,7 +9,8 @@
 		"react": "^16.8"
 	},
 	"framer": {
-		"id": "11fa5712-9745-49c5-917a-a81c5e75aa7d"
+		"id": "11fa5712-9745-49c5-917a-a81c5e75aa7d",
+		"displayName": "grommet"
 	},
 	"author": "Fernando Hurtado",
 	"dependencies": {
@@ -18,5 +19,7 @@
 	},
 	"scripts": {
 		"import:grommet": "importer --config importer.config.json"
-	}
+	},
+	"name": "@framer/fhur.grommet",
+	"version": "1.0.0"
 }

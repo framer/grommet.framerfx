@@ -18,18 +18,13 @@ Calendar.defaultProps = {
 };
 
 addPropertyControls(Calendar, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  animate: merge(controls.animate, {}),
-  date: merge(controls.date, {}),
-  daysOfWeek: merge(controls.daysOfWeek, {}),
-  firstDayOfWeek: merge(controls.firstDayOfWeek, {}),
-  locale: merge(controls.locale, {}),
-  range: merge(controls.range, {}),
-  reference: merge(controls.reference, {}),
-  showAdjacentDays: merge(controls.showAdjacentDays, {}),
-  size: merge(controls.size, {}),
+  animate: merge(controls.animate, { defaultValue: true }),
+  daysOfWeek: merge(controls.daysOfWeek, { defaultValue: true }),
+  showAdjacentDays: merge(controls.showAdjacentDays, { defaultValue: true }),
+  size: {
+    type: ControlType.Enum,
+    options: ["small", "medium", "large"],
+    defaultValue: "medium"
+  },
   placeholder: merge(controls.placeholder, {})
 });

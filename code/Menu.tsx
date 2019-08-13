@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Menu(props) {
+// Expose in V2
+function Menu(props) {
   return <System.Menu {...props} style={style} />;
 }
 

@@ -8,7 +8,8 @@ const style: React.CSSProperties = {
   height: "100%"
 };
 
-export function Grid(props) {
+// Expose in V2
+function Grid(props) {
   return <System.Grid {...props} style={style} />;
 }
 

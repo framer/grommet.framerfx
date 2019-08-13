@@ -2,6 +2,7 @@ import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
 import { controls, merge } from "./inferredProps/Button";
+import { colorControl, sizeControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
@@ -19,7 +20,7 @@ Button.defaultProps = {
 
 addPropertyControls(Button, {
   active: merge(controls.active, {}),
-  color: merge(controls.color, {}),
+  color: colorControl,
   disabled: merge(controls.disabled, {}),
   fill: merge(controls.fill, {
     options: ["horizontal", "vertical", "true"],
@@ -30,5 +31,5 @@ addPropertyControls(Button, {
   href: merge(controls.href, {}),
   label: merge(controls.label, { defaultValue: "Button" }),
   plain: merge(controls.plain, {}),
-  primary: merge(controls.primary, {})
+  primary: merge(controls.primary, { defaultValue: true })
 });

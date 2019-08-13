@@ -1,15 +1,23 @@
 import * as React from "react";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
+import {
+  ControlType,
+  PropertyControls,
+  addPropertyControls,
+  Color
+} from "framer";
 import { controls, merge } from "./inferredProps/Meter";
+import { sizeControl, colorControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Meter(props) {
-  return <System.Meter {...props} style={style} />;
+export function Meter({ value, barColor, ...props }) {
+  return (
+    <System.Meter values={[{ value, color: barColor }] as any} {...props} />
+  );
 }
 
 Meter.defaultProps = {
@@ -18,13 +26,11 @@ Meter.defaultProps = {
 };
 
 addPropertyControls(Meter, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  background: merge(controls.background, {}),
+  background: { ...colorControl, defaultValue: "light-1" },
   round: merge(controls.round, {}),
-  size: merge(controls.size, {}),
+  size: sizeControl,
   thickness: merge(controls.thickness, {}),
-  type: merge(controls.type, {})
+  type: merge(controls.type, { defaultValue: "bar" }),
+  value: { type: ControlType.Number, min: 0, max: 100, defaultValue: 50 },
+  barColor: colorControl
 });
