@@ -16,14 +16,17 @@ const InnerImage: React.SFC = ({ ["children"]: _, ...props }) => {
 export const Image = withHOC(InnerImage);
 
 Image.defaultProps = {
-  width: 150,
-  height: 50
+  width: 200,
+  height: 200
 };
 
 addPropertyControls(Image, {
   alignSelf: merge(controls.alignSelf, {}),
   fit: merge(controls.fit, {}),
-  src: { type: ControlType.Image, defaultValue:  },
+  src: {
+    type: ControlType.Image,
+    defaultValue: "https://placehold.it/200x200"
+  },
   fallback: { type: ControlType.Image },
   opacity: { type: ControlType.Enum, options: ["weak", "medium", "strong"] }
 });

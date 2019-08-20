@@ -207,7 +207,9 @@ export const controls: Controls = {
       "textPath",
       "tspan",
       "use",
-      "view"
+      "view",
+      "template",
+      "feDropShadow"
     ],
     optionTitles: [
       "Symbol",
@@ -381,7 +383,9 @@ export const controls: Controls = {
       "TextPath",
       "Tspan",
       "Use",
-      "View"
+      "View",
+      "Template",
+      "FeDropShadow"
     ],
     defaultValue: "symbol",
     type: ControlType.Enum
@@ -560,7 +564,9 @@ export const controls: Controls = {
       "textPath",
       "tspan",
       "use",
-      "view"
+      "view",
+      "template",
+      "feDropShadow"
     ],
     optionTitles: [
       "Symbol",
@@ -734,7 +740,9 @@ export const controls: Controls = {
       "TextPath",
       "Tspan",
       "Use",
-      "View"
+      "View",
+      "Template",
+      "FeDropShadow"
     ],
     defaultValue: "symbol",
     type: ControlType.Enum

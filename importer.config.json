@@ -95,16 +95,16 @@
       "ignore": false
     },
     "RadioButton": {
-      "ignore": false
+      "ignore": true
     },
     "RadioButtonGroup": {
       "ignore": false
     },
     "RangeInput": {
-      "ignore": false
+      "ignore": true
     },
     "RangeSelector": {
-      "ignore": false
+      "ignore": true
     },
     "RoutedAnchor": {
       "ignore": true
