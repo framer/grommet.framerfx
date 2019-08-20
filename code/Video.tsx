@@ -1,24 +1,28 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Video";
+import { controls, merge } from "./generated/Video";
+import { withHOC } from "./withHOC";
+import { themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Video({ src, ...props }) {
+const InnerVideo = ({ src, ...props }) => {
   return (
-    <System.Video {...props}>
-      <source key="video" src={src} type="video/mp4" />
+    <System.Video {...props} style={style}>
+      <source key="video" src={src} type="video/mp4" style={style} />
     </System.Video>
   );
-}
+};
+
+export const Video = withHOC(InnerVideo);
 
 Video.defaultProps = {
-  width: 420,
-  height: 380
+  width: 342,
+  height: 192
 };
 
 addPropertyControls(Video, {
@@ -27,6 +31,6 @@ addPropertyControls(Video, {
     title: "Source",
     defaultValue: "https://www.krijnrijshouwer.com/file/example.mp4"
   },
-  alignSelf: merge(controls.alignSelf, {}),
-  mute: merge(controls.mute, {})
+  mute: merge(controls.mute, { defaultValue: false }),
+  customTheme: themesControl
 });

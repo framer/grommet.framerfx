@@ -1,21 +1,19 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Paragraph";
-import { colorControl, sizeControl } from "./colors";
+import { controls, merge } from "./generated/Paragraph";
+import { withHOC } from "./withHOC";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Paragraph({ label, ...props }) {
-  return (
-    <System.Paragraph {...props} style={style}>
-      {label}
-    </System.Paragraph>
-  );
-}
+const InnerParagraph: React.SFC = props => {
+  return <System.Paragraph {...props} style={style} />;
+};
+
+export const Paragraph = withHOC(InnerParagraph);
 
 Paragraph.defaultProps = {
   width: 150,
@@ -23,9 +21,13 @@ Paragraph.defaultProps = {
 };
 
 addPropertyControls(Paragraph, {
-  color: colorControl,
+  a11yTitle: merge(controls.a11yTitle, {}),
+  alignSelf: merge(controls.alignSelf, {}),
+  gridArea: merge(controls.gridArea, {}),
+  margin: merge(controls.margin, {}),
+  color: merge(controls.color, {}),
   responsive: merge(controls.responsive, {}),
-  size: sizeControl,
+  size: merge(controls.size, {}),
   textAlign: merge(controls.textAlign, {}),
-  label: { type: ControlType.String, defaultValue: "Text" }
+  placeholder: merge(controls.placeholder, {})
 });

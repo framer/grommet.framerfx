@@ -61,3 +61,9 @@ export const sizeControl: EnumControl = {
   optionTitles: sizes,
   defaultValue: "medium"
 };
+
+export const themesControl: EnumControl = {
+  type: ControlType.Enum,
+  options: ["light", "metro", "hpe"],
+  optionTitles: ["Light", "Metro", "HP Enterprise"]
+};

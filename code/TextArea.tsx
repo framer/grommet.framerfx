@@ -1,16 +1,20 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/TextArea";
+import { controls, merge } from "./generated/TextArea";
+import { withHOC } from "./withHOC";
+import { sizeControl, themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function TextArea(props) {
+const InnerTextArea: React.SFC = props => {
   return <System.TextArea {...props} style={style} />;
-}
+};
+
+export const TextArea = withHOC(InnerTextArea);
 
 TextArea.defaultProps = {
   width: 150,
@@ -18,11 +22,12 @@ TextArea.defaultProps = {
 };
 
 addPropertyControls(TextArea, {
-  fill: merge(controls.fill, {}),
-  focusIndicator: merge(controls.focusIndicator, {}),
-  placeholder: merge(controls.placeholder, {}),
+  placeholder: merge(controls.placeholder, {
+    defaultValue: "TextArea's are fun!"
+  }),
   plain: merge(controls.plain, {}),
-  resize: merge(controls.resize, {}),
-  size: merge(controls.size, {}),
-  disabled: merge(controls.disabled, {})
+  value: merge(controls.value, {}),
+  size: sizeControl,
+  disabled: merge(controls.disabled, {}),
+  customTheme: themesControl
 });

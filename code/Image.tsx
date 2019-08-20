@@ -1,16 +1,19 @@
 import * as React from "react";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Image";
+import { ControlType, addPropertyControls } from "framer";
+import { controls, merge } from "./generated/Image";
+import { withHOC } from "./withHOC";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Image({ ["children"]: _, ...props }) {
+const InnerImage: React.SFC = ({ ["children"]: _, ...props }) => {
   return <System.Image {...props} style={style} />;
-}
+};
+
+export const Image = withHOC(InnerImage);
 
 Image.defaultProps = {
   width: 150,
@@ -20,7 +23,7 @@ Image.defaultProps = {
 addPropertyControls(Image, {
   alignSelf: merge(controls.alignSelf, {}),
   fit: merge(controls.fit, {}),
-  src: { type: ControlType.Image },
+  src: { type: ControlType.Image, defaultValue:  },
   fallback: { type: ControlType.Image },
   opacity: { type: ControlType.Enum, options: ["weak", "medium", "strong"] }
 });

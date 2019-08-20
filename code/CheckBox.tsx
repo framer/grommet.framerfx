@@ -1,14 +1,16 @@
 import * as React from "react";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/CheckBox";
+import { addPropertyControls } from "framer";
+import { controls, merge } from "./generated/CheckBox";
+import { withHOC } from "./withHOC";
+import { themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function CheckBox(props) {
+const InnerCheckBox: React.SFC<any> = props => {
   const {
     checked,
     color,
@@ -40,7 +42,9 @@ export function CheckBox(props) {
       label={props.label}
     />
   );
-}
+};
+
+export const CheckBox = withHOC(InnerCheckBox);
 
 CheckBox.defaultProps = {
   width: 100,
@@ -52,8 +56,9 @@ CheckBox.defaultProps = {
 
 addPropertyControls(CheckBox, {
   label: merge(controls.label, {}),
-  checked: merge(controls.checked, {}),
-  disabled: merge(controls.disabled, {}),
-  reverse: merge(controls.reverse, {}),
-  toggle: merge(controls.toggle, {})
+  checked: merge(controls.checked, { defaultValue: false }),
+  disabled: merge(controls.disabled, { defaultValue: false }),
+  reverse: merge(controls.reverse, { defaultValue: false }),
+  toggle: merge(controls.toggle, { defaultValue: false }),
+  customTheme: themesControl
 });

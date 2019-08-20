@@ -1,12 +1,15 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Anchor";
+import { controls, merge } from "./generated/Anchor";
+import { withHOC } from "./withHOC";
 import { colorControl, sizeControl } from "./colors";
 
-export function Anchor(props) {
+const InnerAnchor: React.SFC = props => {
   return <System.Anchor {...props} />;
-}
+};
+
+export const Anchor = withHOC(InnerAnchor);
 
 Anchor.defaultProps = {
   width: 150,

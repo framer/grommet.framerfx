@@ -1,21 +1,24 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Heading";
-import { colorControl } from "./colors";
+import { controls, merge } from "./generated/Heading";
+import { withHOC } from "./withHOC";
+import { colorControl, themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Heading({ text, ...props }) {
+const InnerHeading: React.SFC<any> = ({ text, ...props }) => {
   return (
     <System.Heading {...props} style={style}>
       {text}
     </System.Heading>
   );
-}
+};
+
+export const Heading = withHOC(InnerHeading);
 
 Heading.defaultProps = {
   width: 202,
@@ -28,5 +31,6 @@ addPropertyControls(Heading, {
   responsive: merge(controls.responsive, {}),
   textAlign: merge(controls.textAlign, {}),
   truncate: merge(controls.truncate, { defaultValue: false }),
-  text: { type: ControlType.String, defaultValue: "Heading!" }
+  text: { type: ControlType.String, defaultValue: "Heading!" },
+  customTheme: themesControl
 });

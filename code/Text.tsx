@@ -1,19 +1,19 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Text";
+import { controls, merge } from "./generated/Text";
+import { withHOC } from "./withHOC";
 
 const style: React.CSSProperties = {
-  overflow: "hidden"
+  width: "100%",
+  height: "100%"
 };
 
-export function Text({ ["children"]: _, label, ...props }) {
-  return (
-    <System.Text {...props} style={style}>
-      {label}
-    </System.Text>
-  );
-}
+const InnerText: React.SFC = props => {
+  return <System.Text {...props} style={style} />;
+};
+
+export const Text = withHOC(InnerText);
 
 Text.defaultProps = {
   width: 150,
@@ -21,13 +21,17 @@ Text.defaultProps = {
 };
 
 addPropertyControls(Text, {
+  a11yTitle: merge(controls.a11yTitle, {}),
+  alignSelf: merge(controls.alignSelf, {}),
+  gridArea: merge(controls.gridArea, {}),
+  margin: merge(controls.margin, {}),
   color: merge(controls.color, {}),
-  size: {
-    type: ControlType.Enum,
-    options: ["xsmall", "small", "medium", "large", "xlarge", "xxlarge"]
-  },
-  label: { type: ControlType.String, defaultValue: "Text" },
+  size: merge(controls.size, {}),
+  tag: merge(controls.tag, {}),
+  as: merge(controls.as, {}),
+  textAlign: merge(controls.textAlign, {}),
   truncate: merge(controls.truncate, {}),
   weight: merge(controls.weight, {}),
-  wordBreak: merge(controls.wordBreak, {})
+  wordBreak: merge(controls.wordBreak, {}),
+  placeholder: merge(controls.placeholder, {})
 });

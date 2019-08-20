@@ -1,16 +1,20 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Calendar";
+import { controls, merge } from "./generated/Calendar";
+import { withHOC } from "./withHOC";
+import { themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-export function Calendar(props) {
+const InnerCalendar: React.SFC = props => {
   return <System.Calendar {...props} style={style} />;
-}
+};
+
+export const Calendar = withHOC(InnerCalendar);
 
 Calendar.defaultProps = {
   width: 150,
@@ -26,5 +30,5 @@ addPropertyControls(Calendar, {
     options: ["small", "medium", "large"],
     defaultValue: "medium"
   },
-  placeholder: merge(controls.placeholder, {})
+  customTheme: themesControl
 });

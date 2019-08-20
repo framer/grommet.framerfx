@@ -1,17 +1,19 @@
 import * as React from "react";
 import * as System from "grommet";
 import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Carousel";
+import { controls, merge } from "./generated/Carousel";
+import { withHOC } from "./withHOC";
 
 const style: React.CSSProperties = {
   width: "100%",
   height: "100%"
 };
 
-// Expose in v2
-function Carousel(props) {
+const InnerCarousel: React.SFC = props => {
   return <System.Carousel {...props} style={style} />;
-}
+};
+
+export const Carousel = withHOC(InnerCarousel);
 
 Carousel.defaultProps = {
   width: 150,

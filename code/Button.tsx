@@ -1,17 +1,15 @@
 import * as React from "react";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./inferredProps/Button";
-import { colorControl, sizeControl } from "./colors";
+import { ControlType, addPropertyControls } from "framer";
+import { controls, merge } from "./generated/Button";
+import { withHOC } from "./withHOC";
+import { colorControl, themesControl } from "./colors";
 
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
+const InnerButton: React.SFC = ({ ["children"]: _, ...props }) => {
+  return <System.Button {...props} />;
 };
 
-export function Button({ ["children"]: _, ...props }) {
-  return <System.Button {...props} />;
-}
+export const Button = withHOC(InnerButton);
 
 Button.defaultProps = {
   width: 150,
@@ -19,17 +17,18 @@ Button.defaultProps = {
 };
 
 addPropertyControls(Button, {
-  active: merge(controls.active, {}),
+  active: merge(controls.active, { defaultValue: false }),
   color: colorControl,
-  disabled: merge(controls.disabled, {}),
+  disabled: merge(controls.disabled, { defaultValue: false }),
   fill: merge(controls.fill, {
     options: ["horizontal", "vertical", "true"],
     defaultValue: "true"
   }),
-  focusIndicator: merge(controls.focusIndicator, {}),
+  focusIndicator: merge(controls.focusIndicator, { defaultValue: false }),
   hoverIndicator: merge(controls.hoverIndicator, {}),
   href: merge(controls.href, {}),
   label: merge(controls.label, { defaultValue: "Button" }),
-  plain: merge(controls.plain, {}),
-  primary: merge(controls.primary, { defaultValue: true })
+  plain: merge(controls.plain, { defaultValue: false }),
+  primary: merge(controls.primary, { defaultValue: true }),
+  customTheme: themesControl
 });
