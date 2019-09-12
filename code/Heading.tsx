@@ -1,9 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Heading";
+import * as React from "react";
+import { colorControl, themesControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { colorControl, themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
@@ -27,10 +26,30 @@ Heading.defaultProps = {
 
 addPropertyControls(Heading, {
   color: colorControl,
-  level: merge(controls.level, {}),
-  responsive: merge(controls.responsive, {}),
-  textAlign: merge(controls.textAlign, {}),
-  truncate: merge(controls.truncate, { defaultValue: false }),
+  level: {
+    title: "Level",
+    options: ["1", "2", "3", "4", "5", "6"],
+    optionTitles: ["1", "2", "3", "4", "5", "6"],
+    defaultValue: "1",
+    type: ControlType.Enum
+  },
+  responsive: {
+    title: "Responsive",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  textAlign: {
+    title: "TextAlign",
+    options: ["start", "center", "end"],
+    optionTitles: ["Start", "Center", "End"],
+    defaultValue: "start",
+    type: ControlType.Enum
+  },
+  truncate: {
+    title: "Truncate",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
   text: { type: ControlType.String, defaultValue: "Heading!" },
   customTheme: themesControl
 });

@@ -1,14 +1,12 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Meter";
+import * as React from "react";
+import {
+  colorControl,
+  sizeControl,
+  themesControl
+} from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { colorControl, sizeControl, themesControl } from "./colors";
-
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
-};
 
 const InnerMeter: React.SFC<any> = ({ value, barColor, ...props }) => {
   return (
@@ -25,9 +23,15 @@ Meter.defaultProps = {
 
 addPropertyControls(Meter, {
   background: { ...colorControl, defaultValue: "light-1" },
-  round: merge(controls.round, {}),
+  round: { title: "Round", defaultValue: false, type: ControlType.Boolean },
   size: sizeControl,
-  type: merge(controls.type, { defaultValue: "bar" }),
+  type: {
+    title: "Type",
+    options: ["circle", "bar"],
+    optionTitles: ["Circle", "Bar"],
+    defaultValue: "circle",
+    type: ControlType.Enum
+  },
   value: { type: ControlType.Number, min: 0, max: 100, defaultValue: 50 },
   barColor: colorControl,
   customTheme: themesControl

@@ -86,7 +86,7 @@
       "ignore": true
     },
     "Menu": {
-      "ignore": true
+      "ignore": false
     },
     "Meter": {
       "ignore": false

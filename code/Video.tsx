@@ -1,9 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Video";
+import * as React from "react";
+import { themesControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
@@ -31,6 +30,6 @@ addPropertyControls(Video, {
     title: "Source",
     defaultValue: "https://www.krijnrijshouwer.com/file/example.mp4"
   },
-  mute: merge(controls.mute, { defaultValue: false }),
+  mute: { type: ControlType.Boolean, defaultValue: false },
   customTheme: themesControl
 });

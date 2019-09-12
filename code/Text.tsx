@@ -1,16 +1,11 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Text";
+import * as React from "react";
+import { colorControl, sizeControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
 
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
-};
-
-const InnerText: React.SFC = props => {
-  return <System.Text {...props} style={style} />;
+const InnerText = ({ text, ...props }) => {
+  return <System.Text {...props}>{text}</System.Text>;
 };
 
 export const Text = withHOC(InnerText);
@@ -21,17 +16,33 @@ Text.defaultProps = {
 };
 
 addPropertyControls(Text, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  color: merge(controls.color, {}),
-  size: merge(controls.size, {}),
-  tag: merge(controls.tag, {}),
-  as: merge(controls.as, {}),
-  textAlign: merge(controls.textAlign, {}),
-  truncate: merge(controls.truncate, {}),
-  weight: merge(controls.weight, {}),
-  wordBreak: merge(controls.wordBreak, {}),
-  placeholder: merge(controls.placeholder, {})
+  color: colorControl,
+  size: sizeControl,
+  text: { type: ControlType.String, defaultValue: "Text" },
+  textAlign: {
+    title: "TextAlign",
+    options: ["start", "center", "end"],
+    optionTitles: ["Start", "Center", "End"],
+    defaultValue: "start",
+    type: ControlType.Enum
+  },
+  truncate: {
+    title: "Truncate",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  weight: {
+    title: "Weight",
+    options: ["normal", "bold"],
+    optionTitles: ["Normal", "Bold"],
+    defaultValue: "normal",
+    type: ControlType.Enum
+  },
+  wordBreak: {
+    title: "WordBreak",
+    options: ["normal", "break-all", "keep-all", "break-word"],
+    optionTitles: ["Normal", "Break-all", "Keep-all", "Break-word"],
+    defaultValue: "normal",
+    type: ControlType.Enum
+  }
 });

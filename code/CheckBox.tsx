@@ -1,45 +1,23 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { addPropertyControls } from "framer";
-import { controls, merge } from "./generated/CheckBox";
+import * as React from "react";
+import { themesControl } from "./utils/customControls";
+import { useManagedState } from "./utils/useManagedState";
 import { withHOC } from "./withHOC";
-import { themesControl } from "./colors";
 
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
-};
+const InnerCheckBox: React.SFC<any> = ({
+  ["children"]: _,
+  onChange,
+  checked,
+  ...props
+}) => {
+  const [currentlyChecked, setChecked] = useManagedState(checked, onChange);
 
-const InnerCheckBox: React.SFC<any> = props => {
-  const {
-    checked,
-    color,
-    disabled,
-    onChange,
-    indeterminate,
-    label,
-    ["children"]: _,
-    ...rest
-  } = props;
-
-  const [state, setState] = React.useState({ checked });
-
-  React.useEffect(() => {
-    setState({ checked });
-  }, [checked]);
-
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    onChange && onChange(event);
-    setState({ ...state, checked: event.target.checked });
-  };
   return (
     <System.CheckBox
-      {...rest}
-      style={style}
-      checked={state.checked}
-      onChange={handleChange}
-      disabled={props.disabled}
-      label={props.label}
+      {...props}
+      checked={currentlyChecked}
+      onChange={e => setChecked(e.target.checked)}
     />
   );
 };
@@ -55,10 +33,14 @@ CheckBox.defaultProps = {
 };
 
 addPropertyControls(CheckBox, {
-  label: merge(controls.label, {}),
-  checked: merge(controls.checked, { defaultValue: false }),
-  disabled: merge(controls.disabled, { defaultValue: false }),
-  reverse: merge(controls.reverse, { defaultValue: false }),
-  toggle: merge(controls.toggle, { defaultValue: false }),
+  label: { title: "Label", defaultValue: "", type: ControlType.String },
+  checked: { title: "Checked", defaultValue: false, type: ControlType.Boolean },
+  disabled: {
+    title: "Disabled",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  reverse: { title: "Reverse", defaultValue: false, type: ControlType.Boolean },
+  toggle: { title: "Toggle", defaultValue: false, type: ControlType.Boolean },
   customTheme: themesControl
 });

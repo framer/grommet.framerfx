@@ -1,9 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Calendar";
+import * as React from "react";
+import { themesControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { themesControl } from "./colors";
 
 const style: React.CSSProperties = {
   width: "100%",
@@ -17,14 +16,22 @@ const InnerCalendar: React.SFC = props => {
 export const Calendar = withHOC(InnerCalendar);
 
 Calendar.defaultProps = {
-  width: 150,
-  height: 50
+  width: 400,
+  height: 430
 };
 
 addPropertyControls(Calendar, {
-  animate: merge(controls.animate, { defaultValue: true }),
-  daysOfWeek: merge(controls.daysOfWeek, { defaultValue: true }),
-  showAdjacentDays: merge(controls.showAdjacentDays, { defaultValue: true }),
+  animate: { title: "Animate", defaultValue: true, type: ControlType.Boolean },
+  daysOfWeek: {
+    title: "DaysOfWeek",
+    defaultValue: true,
+    type: ControlType.Boolean
+  },
+  showAdjacentDays: {
+    title: "ShowAdjacentDays",
+    defaultValue: true,
+    type: ControlType.Boolean
+  },
   size: {
     type: ControlType.Enum,
     options: ["small", "medium", "large"],

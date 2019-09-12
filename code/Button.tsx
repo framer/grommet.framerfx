@@ -1,9 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Button";
+import * as React from "react";
+import { colorControl, themesControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { colorControl, themesControl } from "./colors";
 
 const InnerButton: React.SFC = ({ ["children"]: _, ...props }) => {
   return <System.Button {...props} />;
@@ -17,18 +16,23 @@ Button.defaultProps = {
 };
 
 addPropertyControls(Button, {
-  active: merge(controls.active, { defaultValue: false }),
+  active: { title: "Active", defaultValue: false, type: ControlType.Boolean },
   color: colorControl,
-  disabled: merge(controls.disabled, { defaultValue: false }),
-  fill: merge(controls.fill, {
-    options: ["horizontal", "vertical", "true"],
-    defaultValue: "true"
-  }),
-  focusIndicator: merge(controls.focusIndicator, { defaultValue: false }),
-  hoverIndicator: merge(controls.hoverIndicator, {}),
-  href: merge(controls.href, {}),
-  label: merge(controls.label, { defaultValue: "Button" }),
-  plain: merge(controls.plain, { defaultValue: false }),
-  primary: merge(controls.primary, { defaultValue: true }),
+  disabled: {
+    title: "Disabled",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  fill: {
+    title: "Fill",
+    options: ["horizontal", "vertical", false, true],
+    optionTitles: ["Horizontal", "Vertical", "None", "Both"],
+    defaultValue: "true",
+    type: ControlType.Enum
+  },
+  href: { title: "Href", defaultValue: "", type: ControlType.String },
+  label: { title: "Label", defaultValue: "Button", type: ControlType.String },
+  plain: { title: "Plain", defaultValue: false, type: ControlType.Boolean },
+  primary: { title: "Primary", defaultValue: false, type: ControlType.Boolean },
   customTheme: themesControl
 });

@@ -1,16 +1,10 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Select";
+import * as React from "react";
 import { withHOC } from "./withHOC";
 
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
-};
-
-const InnerSelect: React.SFC = props => {
-  return <System.Select {...props} style={style} />;
+const InnerSelect: React.SFC = ({ ["children"]: _, ...props }) => {
+  return <System.Select options={[]} {...props} />;
 };
 
 export const Select = withHOC(InnerSelect);
@@ -21,28 +15,70 @@ Select.defaultProps = {
 };
 
 addPropertyControls(Select, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  closeOnChange: merge(controls.closeOnChange, {}),
-  disabledKey: merge(controls.disabledKey, {}),
-  dropHeight: merge(controls.dropHeight, {}),
-  focusIndicator: merge(controls.focusIndicator, {}),
-  icon: merge(controls.icon, {}),
-  id: merge(controls.id, {}),
-  labelKey: merge(controls.labelKey, {}),
-  multiple: merge(controls.multiple, {}),
-  name: merge(controls.name, {}),
-  open: merge(controls.open, {}),
-  placeholder: merge(controls.placeholder, {}),
-  plain: merge(controls.plain, {}),
-  replace: merge(controls.replace, {}),
-  searchPlaceholder: merge(controls.searchPlaceholder, {}),
-  selected: merge(controls.selected, {}),
-  size: merge(controls.size, {}),
-  value: merge(controls.value, {}),
-  valueLabel: merge(controls.valueLabel, {}),
-  valueKey: merge(controls.valueKey, {}),
-  emptySearchMessage: merge(controls.emptySearchMessage, {})
+  a11yTitle: { title: "A11yTitle", defaultValue: "", type: ControlType.String },
+  alignSelf: {
+    title: "AlignSelf",
+    options: ["start", "center", "end", "stretch"],
+    optionTitles: ["Start", "Center", "End", "Stretch"],
+    defaultValue: "start",
+    type: ControlType.Enum
+  },
+  gridArea: { title: "GridArea", defaultValue: "", type: ControlType.String },
+  margin: { title: "Margin", defaultValue: "", type: ControlType.String },
+  closeOnChange: {
+    title: "CloseOnChange",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  disabledKey: {
+    title: "DisabledKey",
+    defaultValue: "",
+    type: ControlType.String
+  },
+  dropHeight: {
+    title: "DropHeight",
+    defaultValue: "",
+    type: ControlType.String
+  },
+  focusIndicator: {
+    title: "FocusIndicator",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  icon: { title: "Icon", defaultValue: "", type: ControlType.String },
+  id: { title: "Id", defaultValue: "", type: ControlType.String },
+  labelKey: { title: "LabelKey", defaultValue: "", type: ControlType.String },
+  multiple: {
+    title: "Multiple",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  name: { title: "Name", defaultValue: "", type: ControlType.String },
+  open: { title: "Open", defaultValue: false, type: ControlType.Boolean },
+  placeholder: {
+    title: "Placeholder",
+    defaultValue: "",
+    type: ControlType.String
+  },
+  plain: { title: "Plain", defaultValue: false, type: ControlType.Boolean },
+  replace: { title: "Replace", defaultValue: false, type: ControlType.Boolean },
+  searchPlaceholder: {
+    title: "SearchPlaceholder",
+    defaultValue: "",
+    type: ControlType.String
+  },
+  selected: { title: "Selected", type: ControlType.Number },
+  size: { title: "Size", defaultValue: "", type: ControlType.String },
+  value: { title: "Value", defaultValue: "", type: ControlType.String },
+  valueLabel: {
+    title: "ValueLabel",
+    defaultValue: "",
+    type: ControlType.String
+  },
+  valueKey: { title: "ValueKey", defaultValue: "", type: ControlType.String },
+  emptySearchMessage: {
+    title: "EmptySearchMessage",
+    defaultValue: "",
+    type: ControlType.String
+  }
 });

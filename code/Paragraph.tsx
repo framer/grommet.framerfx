@@ -1,8 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Paragraph";
+import * as React from "react";
 import { withHOC } from "./withHOC";
+import { sizeControl, colorControl } from "./utils/customControls";
 
 const style: React.CSSProperties = {
   width: "100%",
@@ -21,13 +21,18 @@ Paragraph.defaultProps = {
 };
 
 addPropertyControls(Paragraph, {
-  a11yTitle: merge(controls.a11yTitle, {}),
-  alignSelf: merge(controls.alignSelf, {}),
-  gridArea: merge(controls.gridArea, {}),
-  margin: merge(controls.margin, {}),
-  color: merge(controls.color, {}),
-  responsive: merge(controls.responsive, {}),
-  size: merge(controls.size, {}),
-  textAlign: merge(controls.textAlign, {}),
-  placeholder: merge(controls.placeholder, {})
+  color: colorControl,
+  responsive: {
+    title: "Responsive",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
+  size: sizeControl,
+  textAlign: {
+    title: "TextAlign",
+    options: ["start", "center", "end"],
+    optionTitles: ["Start", "Center", "End"],
+    defaultValue: "start",
+    type: ControlType.Enum
+  }
 });

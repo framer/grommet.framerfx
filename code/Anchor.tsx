@@ -1,9 +1,8 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/Anchor";
+import * as React from "react";
+import { colorControl, sizeControl } from "./utils/customControls";
 import { withHOC } from "./withHOC";
-import { colorControl, sizeControl } from "./colors";
 
 const InnerAnchor: React.SFC = props => {
   return <System.Anchor {...props} />;
@@ -18,7 +17,7 @@ Anchor.defaultProps = {
 
 addPropertyControls(Anchor, {
   color: colorControl,
-  label: merge(controls.label, { defaultValue: "Anchor" }),
+  label: { title: "Label", defaultValue: "Anchor", type: ControlType.String },
   size: sizeControl,
   href: { type: ControlType.String, defaultValue: "https://framer.com" }
 });

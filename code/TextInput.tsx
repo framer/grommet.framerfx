@@ -1,17 +1,20 @@
-import * as React from "react";
+import { addPropertyControls, ControlType } from "framer";
 import * as System from "grommet";
-import { ControlType, PropertyControls, addPropertyControls } from "framer";
-import { controls, merge } from "./generated/TextInput";
+import * as React from "react";
+import { sizeControl, themesControl } from "./utils/customControls";
+import { useManagedState } from "./utils/useManagedState";
 import { withHOC } from "./withHOC";
-import { sizeControl, themesControl } from "./colors";
 
-const style: React.CSSProperties = {
-  width: "100%",
-  height: "100%"
-};
+const InnerTextInput = ({ ["children"]: _, value, ...props }) => {
+  const [currentValue, setValue] = useManagedState(value);
 
-const InnerTextInput: React.SFC = ({ ["children"]: _, ...props }) => {
-  return <System.TextInput {...props} style={style} />;
+  return (
+    <System.TextInput
+      value={currentValue}
+      onChange={e => setValue(e.target.value)}
+      {...props}
+    />
+  );
 };
 
 export const TextInput = withHOC(InnerTextInput);
@@ -22,12 +25,18 @@ TextInput.defaultProps = {
 };
 
 addPropertyControls(TextInput, {
-  placeholder: merge(controls.placeholder, {
-    defaultValue: "Text Input Rules!"
-  }),
-  plain: merge(controls.plain, {}),
+  placeholder: {
+    title: "Placeholder",
+    defaultValue: "placeholder",
+    type: ControlType.String
+  },
+  plain: { title: "Plain", defaultValue: false, type: ControlType.Boolean },
+  value: { title: "Value", defaultValue: "", type: ControlType.String },
   size: sizeControl,
-  value: merge(controls.value, { defaultValue: "" }),
-  disabled: merge(controls.disabled, {}),
+  disabled: {
+    title: "Disabled",
+    defaultValue: false,
+    type: ControlType.Boolean
+  },
   customTheme: themesControl
 });
