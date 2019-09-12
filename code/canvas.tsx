@@ -1,6 +1,6 @@
 // WARNING: this file is auto generated, any changes will be lost
 import { createDesignComponent, CanvasStore } from "framer"
-const canvas = CanvasStore.shared(); // CANVAS_DATA;
+const canvas = CanvasStore.shared() // CANVAS_DATA;
 
 export const colors = Object.freeze({
     /** #8549E3 */
